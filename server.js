@@ -1,6 +1,11 @@
-const express = require('express');
-const {routerApiProductos} = require('./routers/routerApiProductos.js');
-const {routerApiCarrito} = require('./routers/routerApiCarrito.js');
+// const express = require('express');
+import express from 'express';
+import { routerApiProductos } from './routers/routerApiProductos.js';
+// import {routerApiCarrito} from './routers/routerApiCarrito.js';
+// import {MongoClient} from 'mongodb'
+
+// const mongoClient = new MongoClient('mongodb://root:mongopassword@localhost?authSource=admin');
+// await mongoClient.connect();
 
 const servidor = express();
 
@@ -11,7 +16,7 @@ servidor.use('/',express.static('public'))
 
 //rutas
 servidor.use('/api/productos',routerApiProductos);
-servidor.use('/api/carrito',routerApiCarrito);
+//servidor.use('/api/carrito',routerApiCarrito);
 
 const server = servidor.listen(8080, () => {
     console.log(`Servidor http escuchando en el puerto ${server.address().port}`)

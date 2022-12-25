@@ -14,4 +14,4 @@ routerApiCarrito.delete('/:id',controladorDeleteCarritoId);
 routerApiCarrito.delete('/:id/productos/:id_prod',controladorDeleteCarritoIdProducto);
 
 
-exports.routerApiCarrito = routerApiCarrito;
+exports const routerApiCarrito = routerApiCarrito;
